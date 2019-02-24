@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Car Log</string>
+    <string name="main_overview_button_text">OVERVIEW</string>
+    <string name="main_trips_button_text">TRIPS</string>
+    <string name="auth_email_hint">example@domain.com</string>
+    <string name="auth_sign_in_button_text">SIGN IN</string>
+    <string name="auth_password_hint">********</string>
+    <string name="auth_sign_up_button_text">SIGN UP</string>
+    <string name="auth_error_sign_in">sign in failed.</string>
+    <string name="auth_error_sign_up">sign up failed.</string>
+    <string name="overview_distance_intro">You have travelled</string>
+    <string name="overview_fuel_intro">You have burnt</string>
+</resources>
