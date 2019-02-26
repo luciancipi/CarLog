@@ -11,6 +11,7 @@ import com.lucianamariei.hw.carlog.R;
 import com.lucianamariei.hw.carlog.database.DataGetter;
 import com.lucianamariei.hw.carlog.util.DistanceUnit;
 import com.lucianamariei.hw.carlog.util.FuelUnit;
+import com.lucianamariei.hw.carlog.util.MeasurementUnitsManager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,10 +41,10 @@ public class OverviewFragment extends Fragment {
     }
 
     private void updateUI(View root) {
-        String totalDistanceString = Integer.toString(totalDistance) + " " + DistanceUnit.KM.getLongName();
+        String totalDistanceString = Integer.toString(totalDistance) + " " + MeasurementUnitsManager.getDistanceUnit().getLongName();
         ((TextView)root.findViewById(R.id.overview_distance_value)).setText(totalDistanceString);
 
-        String totalFuelString = Integer.toString(totalFuel) + " " + FuelUnit.LITRE.getLongName();
+        String totalFuelString = Integer.toString(totalFuel) + " " + MeasurementUnitsManager.getFuelUnit().getLongName();
         ((TextView)root.findViewById(R.id.overview_fuel_value)).setText(totalFuelString);
     }
 

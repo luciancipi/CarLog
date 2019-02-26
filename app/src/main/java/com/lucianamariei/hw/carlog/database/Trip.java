@@ -15,6 +15,8 @@ public class Trip {
 
     public String to;
 
+    public String date;
+
     public int distance;
 
     public int fuel;

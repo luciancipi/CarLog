@@ -3,11 +3,17 @@ package com.lucianamariei.hw.carlog;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.lucianamariei.hw.carlog.database.DataGetter;
 import com.lucianamariei.hw.carlog.gui.FragmentFactory;
+import com.lucianamariei.hw.carlog.util.MeasurementUnitsManager;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -20,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MeasurementUnitsManager.loadPreferredUnits();
 
         loadDataGetter();
         loadUI();
@@ -52,6 +60,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 loadFragment(FragmentFactory.FragmentType.TRIP_LIST);
+            }
+        });
+
+        ImageView logout = findViewById(R.id.main_logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AuthUI.getInstance()
+                        .signOut(getApplicationContext())
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            public void onComplete(@NonNull Task<Void> task) {
+                                finish();
+                            }
+                        });
             }
         });
     }

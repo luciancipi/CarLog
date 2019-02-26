@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "988497043696",
+    "firebase_url": "https://carlog-9b44e.firebaseio.com",
+    "project_id": "carlog-9b44e",
+    "storage_bucket": "carlog-9b44e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988497043696:android:238151cbd5fd3031",
+        "android_client_info": {
+          "package_name": "com.lucianamariei.hw.carlog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988497043696-hhbogfpdfosfs4tao34g1v63slm8tp7i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lucianamariei.hw.carlog",
+            "certificate_hash": "43704caa1f9e2c79b0f0f0a1d3c65533118c165e"
+          }
+        },
+        {
+          "client_id": "988497043696-oeo6siair7hs1ale4u9t5a2a6hc42ln7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGaLEgOlp0VYu5bZkUIS7kVxaDO3N8LJw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988497043696-oeo6siair7hs1ale4u9t5a2a6hc42ln7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,12 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/margin_small">
 
     <TextView
         android:id="@+id/trip_list_row_from"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+
+        android:gravity="start"
+        android:paddingStart="@dimen/margin_medium"
 
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="@dimen/margin_small"
@@ -16,8 +20,11 @@
 
     <TextView
         android:id="@+id/trip_list_row_to"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+
+        android:gravity="start"
+        android:paddingStart="@dimen/margin_medium"
 
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="@dimen/margin_small"
@@ -25,29 +32,51 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
-        android:id="@+id/trip_list_row_distance"
-        android:layout_width="wrap_content"
+        android:id="@+id/trip_list_row_date"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
+        android:gravity="start"
+        android:paddingStart="@dimen/margin_medium"
+
         app:layout_constraintTop_toBottomOf="@id/trip_list_row_from"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/trip_list_row_distance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="start"
+        android:paddingStart="@dimen/margin_medium"
+
+        app:layout_constraintTop_toBottomOf="@id/trip_list_row_date"
         android:layout_marginTop="@dimen/margin_small"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/trip_list_row_fuel"/>
 
     <TextView
         android:id="@+id/trip_list_row_fuel"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
-        app:layout_constraintTop_toBottomOf="@id/trip_list_row_from"
+        android:gravity="start"
+        android:paddingStart="@dimen/margin_medium"
+
+        app:layout_constraintTop_toBottomOf="@id/trip_list_row_date"
         android:layout_marginTop="@dimen/margin_small"
         app:layout_constraintStart_toEndOf="@id/trip_list_row_distance"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/trip_list_row_notes"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+
+        android:gravity="top|start"
+        android:paddingStart="@dimen/margin_medium"
 
         app:layout_constraintTop_toBottomOf="@id/trip_list_row_distance"
         android:layout_marginTop="@dimen/margin_small"

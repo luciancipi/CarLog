@@ -20,89 +20,137 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="@dimen/margin_medium" />
 
-    <EditText
-        android:id="@+id/add_trip_from"
+    <ScrollView
+        android:id="@+id/add_trip_scrollview"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
-        android:hint="from"
-        style="@style/NormalText"
-        android:inputType="text"
+        android:layout_height="0dp"
 
         app:layout_constraintTop_toBottomOf="@id/add_trip_title"
-        android:layout_marginTop="@dimen/margin_large"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="@dimen/margin_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="@dimen/margin_medium" />
-
-    <EditText
-        android:id="@+id/add_trip_to"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
-        android:hint="to"
-        style="@style/NormalText"
-        android:inputType="text"
-
-        app:layout_constraintTop_toBottomOf="@id/add_trip_from"
-        android:layout_marginTop="@dimen/margin_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="@dimen/margin_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="@dimen/margin_medium" />
-
-    <EditText
-        android:id="@+id/add_trip_distance"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
-        android:hint="distance"
-        style="@style/NormalText"
-        android:inputType="number"
-
-        app:layout_constraintTop_toBottomOf="@id/add_trip_to"
-        android:layout_marginTop="@dimen/margin_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="@dimen/margin_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="@dimen/margin_medium" />
-
-    <EditText
-        android:id="@+id/add_trip_fuel"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
-        android:hint="fuel"
-        style="@style/NormalText"
-        android:inputType="number"
-
-        app:layout_constraintTop_toBottomOf="@id/add_trip_distance"
-        android:layout_marginTop="@dimen/margin_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="@dimen/margin_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="@dimen/margin_medium" />
-
-    <EditText
-        android:id="@+id/add_trip_notes"
-        style="@style/NormalText"
-        android:layout_width="0dp"
-
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/margin_medium"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:layout_marginEnd="@dimen/margin_medium"
-        android:layout_marginBottom="@dimen/margin_medium"
-
-        android:gravity="top|left"
-        android:hint="notes"
-        android:inputType="textMultiLine"
-        android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@id/add_trip_cancel"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/add_trip_fuel" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/add_trip_from"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="from"
+                style="@style/NormalText"
+                android:inputType="text"
+
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/margin_large"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/margin_medium" />
+
+            <EditText
+                android:id="@+id/add_trip_to"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="to"
+                style="@style/NormalText"
+                android:inputType="text"
+
+                app:layout_constraintTop_toBottomOf="@id/add_trip_from"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/margin_medium" />
+
+            <EditText
+                android:id="@+id/add_trip_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="date"
+                android:inputType="date"
+
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/add_trip_to" />
+
+            <EditText
+                android:id="@+id/add_trip_distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="distance"
+                style="@style/NormalText"
+                android:inputType="number"
+
+                app:layout_constraintTop_toBottomOf="@id/add_trip_date"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/margin_medium" />
+
+            <EditText
+                android:id="@+id/add_trip_fuel_rate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="fuel rate"
+                style="@style/NormalText"
+                android:inputType="numberDecimal"
+
+                app:layout_constraintTop_toBottomOf="@id/add_trip_distance"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:layout_constraintEnd_toStartOf="@id/add_trip_fuel"
+                android:layout_marginEnd="@dimen/margin_medium" />
+
+            <TextView
+                android:id="@+id/add_trip_fuel"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                style="@style/NormalText"
+                android:gravity="center"
+
+                app:layout_constraintTop_toTopOf="@id/add_trip_fuel_rate"
+                app:layout_constraintBottom_toBottomOf="@id/add_trip_fuel_rate"
+                app:layout_constraintStart_toEndOf="@id/add_trip_fuel_rate"
+                android:layout_marginStart="@dimen/margin_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/margin_medium" />
+
+            <EditText
+                android:id="@+id/add_trip_notes"
+                style="@style/NormalText"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+
+                android:gravity="top|left"
+                android:hint="notes"
+                android:inputType="textMultiLine"
+                android:minLines="5"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/add_trip_fuel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
     <Button
         android:id="@+id/add_trip_cancel"

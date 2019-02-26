@@ -15,4 +15,8 @@
     <style name="LargeText" parent="TextAppearance.AppCompat">
         <item name="android:textSize">24sp</item>
     </style>
+
+    <style name="BoldLargeText" parent="LargeText">
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

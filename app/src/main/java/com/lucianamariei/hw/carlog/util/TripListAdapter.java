@@ -51,13 +51,14 @@ public class TripListAdapter extends RecyclerView.Adapter<TripListAdapter.ViewHo
 
     // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView from, to, distance, fuel, notes;
+        private TextView from, to, date, distance, fuel, notes;
 
         ViewHolder(View itemView) {
             super(itemView);
 
             from = itemView.findViewById(R.id.trip_list_row_from);
             to = itemView.findViewById(R.id.trip_list_row_to);
+            date = itemView.findViewById(R.id.trip_list_row_date);
             distance = itemView.findViewById(R.id.trip_list_row_distance);
             fuel = itemView.findViewById(R.id.trip_list_row_fuel);
             notes = itemView.findViewById(R.id.trip_list_row_notes);
@@ -68,6 +69,7 @@ public class TripListAdapter extends RecyclerView.Adapter<TripListAdapter.ViewHo
         public void setFields(Trip trip) {
             from.setText("From: " + trip.from);
             to.setText("To: " + trip.to);
+            date.setText("Date: " + trip.date);
             distance.setText("Distance :" + trip.distance + DistanceUnit.KM.getShortName());
             fuel.setText("Fuel: " + trip.fuel + FuelUnit.LITRE.getShortName());
             notes.setText("Notes: " + trip.notes);
